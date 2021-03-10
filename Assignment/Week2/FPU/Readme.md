@@ -1,14 +1,3 @@
-FPU Notes
----------
-
-1)  The FPU will never generate a SNAN output
-1a) The SNAN output is asserted when one of the operands
-    was a signaling NAN (output will be a quiet NAN).
-1b) The QNAN output is asserted whenever the OUTPUT of
-    the FPU is NAN (always a quiet NAN).
-
-
-
 FPU
 ===
 The FPU consists of the following files:
