@@ -9,6 +9,6 @@
 [OpenCV - Python](https://pypi.org/project/opencv-python/)
 # 2. Write a "Hello World" app
 ```python
-print ('Hello World')
+print('Hello World')
 ```
 ## Read, Write and Display a video/webcam using OpenCV python
