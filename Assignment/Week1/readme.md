@@ -38,7 +38,7 @@
 
     cam.release()
     cv2.destroyAllWindows()
-    ```
+   
 **Write and display webcam**
 
      from cv2 import cv2
