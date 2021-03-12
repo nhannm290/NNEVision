@@ -40,8 +40,42 @@
     cv2.destroyAllWindows()
 **Write and display webcam**
 
-     I'm on my way...
+     from cv2 import cv2
+     #  Set the value in VideoCapture is 0 if you want to use the camera, or path of the video if you want to read it
+     video = cv2.VideoCapture(0)
+
+     #check camera is available
+     if (video.isOpened()==False):
+     print("Unable to open camera")
+    
+     #define codec
+     frame_width = int(video.get(3))
+     frame_height = int(video.get(4))
+     fourcc = cv2.VideoWriter_fourcc(*'MP4V')
+     fps = 30
+     #The written video is at the path below
+     out = cv2.VideoWriter('/home/nhannm29/Downloads/webcamwritten.mp4',fourcc, fps, (frame_width,frame_height))
+
+     while(video.isOpened()):
+     ret, frame = video.read()
+     if(ret==True):
+        out.write(frame)
+        cv2.imshow('frame',frame)
+        
+        #press q to stop writing webcam at anywhere you want
+        if cv2.waitKey(40) & 0xFF == ord('q'):
+            break
+
+     video.release()
+     out.release()
+     cv2.destroyAllWindows()
      
+     
+   ![webcamwritten (1)](https://user-images.githubusercontent.com/80024215/110963538-c214d900-8384-11eb-8485-5c1495a133c4.gif)
+
+
+
+
 **Read and play a video**
 
     import numpy as np
