@@ -10,7 +10,7 @@
 # 2. Write a "Hello World" app
 ## Read, Write and Display a video/webcam using OpenCV python
 **Capture and write an image to file.**
-     
+   ```python  
     import cv2
     camera = cv2.VideoCapture(0)
 
@@ -38,6 +38,7 @@
 
     cam.release()
     cv2.destroyAllWindows()
+    ```
 **Write and display webcam**
 
      from cv2 import cv2
