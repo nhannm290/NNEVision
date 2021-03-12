@@ -38,9 +38,9 @@
 
     cam.release()
     cv2.destroyAllWindows()
-   
+   ```
 **Write and display webcam**
-
+     ```python
      from cv2 import cv2
      #  Set the value in VideoCapture is 0 if you want to use the camera, or path of the video if you want to read it
      video = cv2.VideoCapture(0)
@@ -70,15 +70,15 @@
      video.release()
      out.release()
      cv2.destroyAllWindows()
-     
+    
      
    ![webcamwritten (1)](https://user-images.githubusercontent.com/80024215/110963538-c214d900-8384-11eb-8485-5c1495a133c4.gif)
-
-
+      ```
+      
 
 
 **Read and play a video**
-
+```python
     import numpy as np
     import cv2
     #Create a video and read from input file
@@ -99,6 +99,8 @@
     
      cap.release()
      cv2.destroyAllWindows()
+```
+
  **Write and play a video**
  
     import numpy as np
