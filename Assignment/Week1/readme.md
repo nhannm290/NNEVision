@@ -40,7 +40,7 @@
     cv2.destroyAllWindows()
    ```
 **Write and display webcam**
-     ```python
+   ```python
      import cv2
      #  Set the value in VideoCapture is 0 if you want to use the camera, or path of the video if you want to read it
      video = cv2.VideoCapture(0)
