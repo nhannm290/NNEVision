@@ -104,7 +104,7 @@
 ```
 
  **Write and play a video**
- 
+ ```python
     import numpy as np
     import cv2
     #Choose the video you want to write
@@ -137,3 +137,4 @@
     video.release()
     out.release()
     cv2.destroyAllWindows()
+    ```
