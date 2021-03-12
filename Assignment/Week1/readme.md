@@ -70,7 +70,8 @@
      video.release()
      out.release()
      cv2.destroyAllWindows()
-     ```
+  ```
+ 
     
      
    ![webcamwritten (1)](https://user-images.githubusercontent.com/80024215/110963538-c214d900-8384-11eb-8485-5c1495a133c4.gif)
