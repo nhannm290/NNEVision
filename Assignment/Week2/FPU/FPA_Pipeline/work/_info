@@ -1,0 +1,186 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/CE/FPGA/RGB_to_Gray
+vAlignment
+Z0 !s110 1615645356
+!i10b 1
+!s100 G<`aongZ_@Z:fQzkePcS02
+ISMb3InHKgg]_Y6;<J7OC30
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/CE/FPGA/RGB_to_Gray/FPA_Pipeline
+w1615632623
+8D:\CE\FPGA\RGB_to_Gray\FPA_Pipeline\Alignment.v
+FD:\CE\FPGA\RGB_to_Gray\FPA_Pipeline\Alignment.v
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1615645356.000000
+!s107 D:\CE\FPGA\RGB_to_Gray\FPA_Pipeline\Alignment.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\CE\FPGA\RGB_to_Gray\FPA_Pipeline\Alignment.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@alignment
+vCalculation
+R0
+!i10b 1
+!s100 7SmJe`c]Le]8iECaO2E7>3
+IZFzRDL1efLj4n^01H9M9I2
+R1
+R2
+w1615623224
+8D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Calculation.v
+FD:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Calculation.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Calculation.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Calculation.v|
+!s101 -O0
+!i113 1
+R5
+n@calculation
+vFPA_Pipeline
+R0
+!i10b 1
+!s100 90^`bWL4ESXCFDzGRXd040
+I`MZ3bQlzSd`B=W8:SonP<2
+R1
+R2
+w1615645058
+8D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/FPA_Pipeline.v
+FD:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/FPA_Pipeline.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/FPA_Pipeline.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/FPA_Pipeline.v|
+!s101 -O0
+!i113 1
+R5
+n@f@p@a_@pipeline
+vNormalization
+R0
+!i10b 1
+!s100 47:=_hm4z5eVJ<gZTRYO]2
+IizhbMkcYMXLRdUQZc^`DF0
+R1
+R2
+w1615645351
+8D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Normalization.v
+FD:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Normalization.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Normalization.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Normalization.v|
+!s101 -O0
+!i113 1
+R5
+n@normalization
+vRegsister_Aligment_to_Calculation
+R0
+!i10b 1
+!s100 Dkn@1d?]g_h6cmD?>@@Zc2
+IC:]z`l8:36iPlnM]ZE_z:0
+R1
+R2
+w1615625036
+8D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Aligment_to_Calculation.v
+FD:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Aligment_to_Calculation.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Aligment_to_Calculation.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Aligment_to_Calculation.v|
+!s101 -O0
+!i113 1
+R5
+n@regsister_@aligment_to_@calculation
+vRegsister_Aligment_to_Control
+!s110 1615624976
+!i10b 1
+!s100 bYmXO6]]0mQ2C;M;cUUW?2
+IECS`]U9?0BomF3YUXgI6=3
+R1
+R2
+w1615624902
+8D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Aligment_to_Control.v
+FD:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Aligment_to_Control.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1615624976.000000
+!s107 D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Aligment_to_Control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Aligment_to_Control.v|
+!s101 -O0
+!i113 1
+R5
+n@regsister_@aligment_to_@control
+vRegsister_Calculation_to_Normalization
+R0
+!i10b 1
+!s100 m:<lPUP6NNOLSgYBA8anQ3
+IUASVNzoA26Whl5_cI0G]F3
+R1
+R2
+w1615623141
+8D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Calculation_to_Normalization.v
+FD:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Calculation_to_Normalization.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Calculation_to_Normalization.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Regsister_Calculation_to_Normalization.v|
+!s101 -O0
+!i113 1
+R5
+n@regsister_@calculation_to_@normalization
+vTestbench
+!s110 1615645357
+!i10b 1
+!s100 5CC1a^5`BREGgdFiY`A]N1
+IYAJEdlA:cc^IlK@RXWPG;2
+R1
+R2
+w1615633295
+8D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Testbench.v
+FD:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Testbench.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1615645357.000000
+!s107 D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CE/FPGA/RGB_to_Gray/FPA_Pipeline/Testbench.v|
+!s101 -O0
+!i113 1
+R5
+n@testbench
