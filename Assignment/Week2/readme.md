@@ -1,7 +1,7 @@
 ### 1.  ModelSim - Quartus Prime Life:
     -   To install and run ModelSim, do step-by-step in link: https://www.youtube.com/watch?v=HfVTi0vN4Ks
     -   Running Modelsim on Ubuntu 20.04:
-    -       Open Terminal and run the path below to run Modelsim: ~/intelFPGA/20.1/modelsim_ase/bin/vsim
+         + Open Terminal and run the path below to run Modelsim: ~/intelFPGA/20.1/modelsim_ase/bin/vsim
 ### 2.  Cocotb:
     -   To know how to write testbench by Python, check: https://indico.cern.ch/event/776422/attachments/1769690/2874927/cocotb_talk.pdf
 ### 3.  RGB -> Gray Algorithm:
