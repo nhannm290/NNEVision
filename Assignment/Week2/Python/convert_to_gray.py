@@ -3,15 +3,17 @@ import numpy as np
 
 #Load image
 image = cv2.imread('messi.jpg')
-#Show image
-cv2.imshow('messi',image)
+#convert image
+resized_img = cv2.resize(image,(500,500),interpolation=cv2.INTER_AREA)
 cv2.waitKey()
-
-# convert gray image
-gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-gray_img_resize = cv2.resize(gray_image,(500,500),interpolation=cv2.INTER_AREA)
-# save to new file
-cv2.imwrite('messi_gray.png',gray_img_resize)
-cv2.imshow("messi_gray", gray_img_resize)
+b,g,r = cv2.split(resized_img)
+gray_result = (0.299*r + 0.587*g + 0.114*b)/255
+out_gray = open('Gray_Decimal.txt','w')
+gray_result = np.array(gray_result)
+#write gray image
+for i in range(500):
+    for j in range (500):
+        out_gray.write(str(gray_result[i][j])+ '\n')
+cv2.imshow("messi_gray", gray_result)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
