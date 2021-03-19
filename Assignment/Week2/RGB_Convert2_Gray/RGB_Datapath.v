@@ -13,7 +13,8 @@ module RGB_Datapath (
     wire [31:0] Red_Line_Add,GREEN_Line_Add,BLUE_Line_Add,Red_GREEN_Line_Add,RED_GREEN_BLUE_Add_Line;
     wire FtI_Out;
     wire Out_Signal_Red_Mul,Out_Signal_GREEN_Mul,Out_Signal_BLUE_Mul;
-    wire Out_Signal_RED_GREEN_Add,Out_Signal_RED_GREEN_BLUE_Add;
+    wire Out_Signal_RED_GREEN_Add,Out_Signal_RED_GREEN_BLUE_Add,In_Signal_RED_GREEN_Add;
+    wire [31:0] BLUE_Line_Reg1, BLUE_Line_Reg2, BLUE_Line_Reg3,BLUE_Line_Reg4;
 
 
     ItF RED (
@@ -66,15 +67,40 @@ module RGB_Datapath (
         .a(Blue_Line_Mul),
         .b(BLUE_Factor),
         .bias(8'd127),
-        .out(BLUE_Line_Add),
+        .out(BLUE_Line_Reg1),
         .result(Out_Signal_BLUE_Mul),
         .overflow()
     );
-    assign Out_Signal_RED_GREEN_Add = Out_Signal_GREEN_Mul & Out_Signal_Red_Mul;
+    
+    Reg_Pipeline R1(
+        .Data_out(BLUE_Line_Reg2),
+        .Data_in(BLUE_Line_Reg1),
+        .Enable(1'b1),
+        .CLK(CLK)
+    );
+    Reg_Pipeline R2(
+        .Data_out(BLUE_Line_Reg3),
+        .Data_in(BLUE_Line_Reg2),
+        .Enable(1'b1),
+        .CLK(CLK)
+    );
+    Reg_Pipeline R3(
+        .Data_out(BLUE_Line_Reg4),
+        .Data_in(BLUE_Line_Reg3),
+        .Enable(1'b1),
+        .CLK(CLK)
+    );
+    Reg_Pipeline R4(
+        .Data_out(BLUE_Line_Add),
+        .Data_in(BLUE_Line_Reg4),
+        .Enable(1'b1),
+        .CLK(CLK)
+    );
+    assign In_Signal_RED_GREEN_Add = Out_Signal_GREEN_Mul & Out_Signal_Red_Mul;
     FPA_Pipeline RED_GREEN_Add(
         .Result(Red_GREEN_Line_Add), 
         .Value_Out(Out_Signal_RED_GREEN_Add), 
-        .Value_In(Out_Signal_RED_GREEN_Add),
+        .Value_In(In_Signal_RED_GREEN_Add),
         .Sub_Signal(1'b0),
         .Rm(2'b0),
         .OpA(Red_Line_Add),
@@ -83,6 +109,9 @@ module RGB_Datapath (
         .Clear(Clear)
     );
     assign Out_Signal_RED_GREEN_BLUE_Add =Out_Signal_BLUE_Mul & Out_Signal_RED_GREEN_Add ;
+
+    
+
     FPA_Pipeline RED_GREEN_BLUE_Add(
         .Result(RED_GREEN_BLUE_Add_Line), 
         .Value_Out(FtI_Out), 
