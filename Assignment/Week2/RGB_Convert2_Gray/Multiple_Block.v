@@ -13,8 +13,12 @@
     output  wire [31:0] Red_Out,Green_Out,Blue_Out;
     output Flag_Red,Flag_Green,Flag_Blue;
 
-    //wire [31:0] Red_to_Reg,Green_to_Reg,Blue_to_Reg;
+    wire [31:0] Red_to_Mux,Green_to_Mux,Blue_to_Mux;
+    wire Control_Red,Control_Green,Control_Blue;
 
+    assign Control_Red      = ~| Red_In;
+    assign Control_Green    = ~| Green_In;
+    assign Control_Blue     = ~| Blue_In;
 
     FPM RED_Mul(
         .clk(CLK),
@@ -22,7 +26,7 @@
         .a(Red_In),
         .b(RED_Factor),
         .bias(8'd127),
-        .out(Red_Out),
+        .out(Red_to_Mux),
         .result(Flag_Red),
         .overflow()
     );
@@ -33,7 +37,7 @@
         .a(Green_In),
         .b(GREEN_Factor),
         .bias(8'd127),
-        .out(Green_Out),
+        .out(Green_to_Mux),
         .result(Flag_Green),
         .overflow()
     );
@@ -44,9 +48,27 @@
         .a(Blue_In),
         .b(BLUE_Factor),
         .bias(8'd127),
-        .out(Blue_Out),
+        .out(Blue_to_Mux),
         .result(Flag_Blue),
         .overflow()
+    );
+    Mux2_1 RED (
+        .Data_Out(Red_Out),
+        .Data_A(Red_to_Mux),
+        .Data_B(32'b0),
+        .Select(Control_Red)
+    );
+    Mux2_1 GREEN (
+        .Data_Out(Green_Out),
+        .Data_A(Green_to_Mux),
+        .Data_B(32'b0),
+        .Select(Control_Green)
+    );
+    Mux2_1 BLUE (
+        .Data_Out(Blue_Out),
+        .Data_A(Blue_to_Mux),
+        .Data_B(32'b0),
+        .Select(Control_Blue)
     );
 
     
