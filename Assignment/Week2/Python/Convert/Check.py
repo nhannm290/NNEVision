@@ -4,6 +4,7 @@
 f1 = open("Gray_Hex.txt","r")
 f2 = open("bitmap.out","r")
 
+f_result = open("Result.txt","w")
 # Print confirmation
 print("-----------------------------------")
 print("Comparing files ", " > " + "Gray_Hex.txt", " < " +"bitmap.out", sep='\n')
@@ -44,6 +45,8 @@ while f1_line != '' or f2_line != '':
         # Print a blank line
         print()
         Count_Error = Count_Error +1
+        f_result.write(f1_line + "\t" + f2_line + "\n")
+
 
     #Read the next line from the file
     f1_line = f1.readline()
@@ -57,3 +60,5 @@ while f1_line != '' or f2_line != '':
 f1.close()
 f2.close()
 print ("Total error: ",Count_Error)
+f_result.write("Total error: " +str(Count_Error))
+f_result.close()
