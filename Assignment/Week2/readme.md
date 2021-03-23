@@ -11,9 +11,7 @@
 *   2 Operators: Add, Multiple
 *   2 Converts: Float_to_Int, Int_to_Float
 *   More Detail check FPU Folder.
-## 5. RGB -> Gray Diagram:
-![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/Untitled%20Diagram.png)
-## 6. RGB_2_GRAY Pipeline:
+## 5. RGB_2_GRAY Pipeline Diagram:
 * Take 40 Cycles to make the True Result.
 * Error:
     * Max: 1'b1.
