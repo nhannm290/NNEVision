@@ -1,19 +1,17 @@
 module FPA_Pipeline (
-    Result, Value_Out, Value_In,Sub_Signal,Rm,OpA,OpB,Clk,Clear
+    Result, Enable_Reg0,Enable_Reg1,Sub_Signal,Rm,OpA,OpB,Clk,Clear
 );
-    input Clk,Clear,Value_In;
+    input Clk,Clear,Enable_Reg0,Enable_Reg1;
     input [31:0] OpA,OpB;
     input [1:0] Rm;
     input Sub_Signal;
     output [31:0] Result;
-    output Value_Out;
     wire [26:0] Alignment_Small_Frac;
     wire [23:0] Alignment_Large_Frac;
     wire [22:0] Alignment_Infinity_NaN_Frac;
     wire  [7:0] Alignment_Exp;
     wire Alignment_is_NaN, Alignment_is_Infinity;
     wire Alignment_Sign;
-    wire Alignment_Sub_Signal;
     wire Alignment_Op_Sub;
     // Alignment Statements
     Alignment Al_State (
@@ -59,7 +57,7 @@ module FPA_Pipeline (
         .Alignment_is_Infinity(Alignment_is_Infinity),
         .Alignment_Sign(Alignment_Sign),
         .Alignment_Sub_Signal(Alignment_Op_Sub),
-        .Value_In(Value_In),
+        .Value_In(Enable_Reg0),
         .Clk(Clk),
         .Clear(Clear)
     );
@@ -88,7 +86,7 @@ module FPA_Pipeline (
         .Normalization_Frac(Normalization_Frac),
         .Clk(Clk),
         .Clear(Clear),
-        .Value_In(Value_In),
+        .Value_In(Enable_Reg1),
         .Calculation_is_NaN(Calculation_is_NaN), 
         .Calculation_is_Infinite(Calculation_is_Infinity), 
         .Calculation_Sign(Calculation_Sign), 
@@ -107,7 +105,6 @@ module FPA_Pipeline (
         .Rm(Normalization_Rm), 
         .Temp_Exp(Normalization_Exp), 
         .Infinity_NaN_Frac(Normalization_Infinity_NaN_Frac), 
-        .Calculation_Frac(Normalization_Frac),
-        .Value_Out(Value_Out)
+        .Calculation_Frac(Normalization_Frac)
     );
 endmodule
