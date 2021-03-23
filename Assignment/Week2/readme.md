@@ -17,3 +17,14 @@
     * Max: 1'b1.
     * Min: 1'b0
 * Datapath: ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/RGB_GRAY.png)
+## 6. Imange:
+We use image 800x533 pixel to run Example:
+![Messi_RGB](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/messi.jpg)
+## Result:
+* The result is stored in bitmap.out and it is converted to RGB.png 
+![Messi_GRAY](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/RGB.png)
+* To check the Error: Run Check.py in Python Folder
+* The Error is also converted to Image:
+![ERROR_IMAGE](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/Result.png)
+## 7. Run All in One:
+* Still working 
