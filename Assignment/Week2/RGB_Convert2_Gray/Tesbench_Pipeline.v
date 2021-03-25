@@ -22,7 +22,7 @@ module Tesbench_Pipeline (
             #40
             CLEAR = 1;
             $fscanf(Input_File,"%h\n", RGB);
-            for(i = 32'd0;i <40; i = i +1'd1) begin
+            for(i = 32'd0;i <20; i = i +1'd1) begin
                 #40;               
             end
             COUNT= COUNT+1'd1;
