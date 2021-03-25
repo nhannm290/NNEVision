@@ -27,5 +27,6 @@ We use image 800x533 pixel to run Example:
 * To check the Error: Run Check.py in Python Folder
 * The Error is also converted to Image:
 ![ERROR_IMAGE](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/Result.png)
+![Find_Error](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/Result_Error.jpg)
 ## 7. Run All in One:
 * Still working 
