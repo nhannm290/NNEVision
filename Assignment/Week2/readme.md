@@ -12,7 +12,7 @@
 *   2 Converts: Float_to_Int, Int_to_Float
 *   More Detail check FPU Folder.
 ## 5. RGB_2_GRAY:
-* Take 19 Cycles to make the Result.
+* 1 pixel RGB take 19 Cycles to make 1 pixel GRAY.
 * Result is stored in "binmap.out" file.
 * Error:
     * Max: 1'b1.
