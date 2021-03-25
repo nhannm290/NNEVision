@@ -12,7 +12,7 @@
 *   2 Converts: Float_to_Int, Int_to_Float
 *   More Detail check FPU Folder.
 ## 5. RGB_2_GRAY:
-* Take 40 Cycles to make the True Result.
+* Take 19 Cycles to make the True Result.
 * Error:
     * Max: 1'b1.
     * Min: 1'b0
