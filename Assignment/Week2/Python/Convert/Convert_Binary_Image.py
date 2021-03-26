@@ -1,15 +1,21 @@
 import numpy as np
 import cv2 as cv
 
-image=np.zeros((533,800),dtype=float)
-f = open('bitmap.out', 'r')
+f_detail = open("Detail.txt","r")
+imaga_width = int(f_detail.readline())
+image_height = int(f_detail.readline())
 
-for i in range(533):
-    for j in range(800):
-        data_read = f.readline()
-        int_data = int(data_read,16)
-        image[i][j] = float(int_data)/255
-cv.imwrite("RGP_GRAY_Verilog.png",image)
-cv.imshow('Gray_Out',image)
+image_blank = np.zeros((image_height,imaga_width,3),np.float32)
+f = open('bitmap.out', 'r')
+pixel = []
+for x in f:
+    pixel.append(int(x,16))
+k=0
+for i in range(image_height):
+    for j in range(imaga_width):
+       image[i,j] = (pixel[k],pixel[k],pixel[k])
+       k = k+1
+cv.imwrite('Result.jpg',image)
+cv.imshow('Result_Error',image)
 cv.waitKey(0)
 cv.destroyAllWindows()
