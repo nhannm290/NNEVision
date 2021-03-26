@@ -4,9 +4,13 @@ from codecs import decode
 import numpy
 
 
-img = cv.imread('messi.jpg');
+img = cv.imread('D:\CE\FPGA\RGB_to_Gray\Image\Songoku.jpg');
+
+detail_file = open("Detail.txt","w")
 img_width = img.shape[0]
+detail_file.write(str(img_width)+"\n")
 img_height = img.shape[1]
+detail_file.write(str(img_height)+"\n")
 
 #print(img_width)
 #print(img_height)
@@ -17,6 +21,6 @@ for i in range(0, img_width):
         g = '%02X' % img[i, j][1]
         b = '%02X' % img[i, j][0]
         rgb = r+g+b
-        print(rgb)
+
         file_write.write(rgb+"\n")
 file_write.close()
