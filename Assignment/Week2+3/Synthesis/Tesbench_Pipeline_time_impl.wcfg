@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Tesbench_Pipeline_time_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="Tesbench_Pipeline" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1662fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="330"></NameColumnWidth>
+      <ValueColumnWidth column_width="100"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="95" />
+   <wave_markers>
+      <marker label="" time="32106" />
+      <marker label="" time="360524" />
+   </wave_markers>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/START">
+      <obj_property name="ElementShortName">START</obj_property>
+      <obj_property name="ObjectShortName">START</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/CLEAR">
+      <obj_property name="ElementShortName">CLEAR</obj_property>
+      <obj_property name="ObjectShortName">CLEAR</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/RGB">
+      <obj_property name="ElementShortName">RGB[23:0]</obj_property>
+      <obj_property name="ObjectShortName">RGB[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/GRAY">
+      <obj_property name="ElementShortName">GRAY[7:0]</obj_property>
+      <obj_property name="ObjectShortName">GRAY[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DONE">
+      <obj_property name="ElementShortName">DONE</obj_property>
+      <obj_property name="ObjectShortName">DONE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/i">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/COUNT">
+      <obj_property name="ElementShortName">COUNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COUNT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/FtI_Enable">
+      <obj_property name="ElementShortName">FtI_Enable</obj_property>
+      <obj_property name="ObjectShortName">FtI_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Add_Enable1">
+      <obj_property name="ElementShortName">Add_Enable1</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/RegOut_Enable">
+      <obj_property name="ElementShortName">RegOut_Enable</obj_property>
+      <obj_property name="ObjectShortName">RegOut_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/DONE_Add_Flag2">
+      <obj_property name="ElementShortName">DONE_Add_Flag2</obj_property>
+      <obj_property name="ObjectShortName">DONE_Add_Flag2</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/ItF_Red">
+      <obj_property name="ElementShortName">ItF_Red[30:16]</obj_property>
+      <obj_property name="ObjectShortName">ItF_Red[30:16]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/ItF_Green">
+      <obj_property name="ElementShortName">ItF_Green[30:16]</obj_property>
+      <obj_property name="ObjectShortName">ItF_Green[30:16]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/ItF_Blue">
+      <obj_property name="ElementShortName">ItF_Blue[30:16]</obj_property>
+      <obj_property name="ObjectShortName">ItF_Blue[30:16]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Reg0_Out2">
+      <obj_property name="ElementShortName">Reg0_Out2[22:16]</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Out2[22:16]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Reg0_Out1">
+      <obj_property name="ElementShortName">Reg0_Out1[23:16]</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Out1[23:16]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Reg0_Out0">
+      <obj_property name="ElementShortName">Reg0_Out0[22:16]</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Out0[22:16]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Reg1_Out2">
+      <obj_property name="ElementShortName">Reg1_Out2[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Out2[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Reg1_Out1">
+      <obj_property name="ElementShortName">Reg1_Out1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Out1[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Reg1_Out0">
+      <obj_property name="ElementShortName">Reg1_Out0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Out0[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Mul_Red">
+      <obj_property name="ElementShortName">Mul_Red[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Mul_Red[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Mul_Green">
+      <obj_property name="ElementShortName">Mul_Green[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Mul_Green[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/DATAPATH/Add_Out">
+      <obj_property name="ElementShortName">Add_Out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Add_Out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/DONE_Add_Flag2">
+      <obj_property name="ElementShortName">DONE_Add_Flag2</obj_property>
+      <obj_property name="ObjectShortName">DONE_Add_Flag2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/ItF_Enable_In">
+      <obj_property name="ElementShortName">ItF_Enable_In</obj_property>
+      <obj_property name="ObjectShortName">ItF_Enable_In</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg0_Enable">
+      <obj_property name="ElementShortName">Reg0_Enable</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Mul_Enable_In">
+      <obj_property name="ElementShortName">Mul_Enable_In</obj_property>
+      <obj_property name="ObjectShortName">Mul_Enable_In</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg1_Enable">
+      <obj_property name="ElementShortName">Reg1_Enable</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Add_Enable1">
+      <obj_property name="ElementShortName">Add_Enable1</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Add_Enable2">
+      <obj_property name="ElementShortName">Add_Enable2</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg2_Enable">
+      <obj_property name="ElementShortName">Reg2_Enable</obj_property>
+      <obj_property name="ObjectShortName">Reg2_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/FtI_Enable">
+      <obj_property name="ElementShortName">FtI_Enable</obj_property>
+      <obj_property name="ObjectShortName">FtI_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/RegOut_Enable">
+      <obj_property name="ElementShortName">RegOut_Enable</obj_property>
+      <obj_property name="ObjectShortName">RegOut_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/DONE">
+      <obj_property name="ElementShortName">DONE</obj_property>
+      <obj_property name="ObjectShortName">DONE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg1_Add_Enable">
+      <obj_property name="ElementShortName">Reg1_Add_Enable</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Add_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Add_Enable1">
+      <obj_property name="ElementShortName">Add_Enable1</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Add_Enable1_reg_i_1_n_0">
+      <obj_property name="ElementShortName">Add_Enable1_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable1_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Add_Enable1_reg_i_2_n_0">
+      <obj_property name="ElementShortName">Add_Enable1_reg_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable1_reg_i_2_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Add_Enable2">
+      <obj_property name="ElementShortName">Add_Enable2</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Add_Enable2_reg_i_1_n_0">
+      <obj_property name="ElementShortName">Add_Enable2_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable2_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Add_Enable2_reg_i_2_n_0">
+      <obj_property name="ElementShortName">Add_Enable2_reg_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">Add_Enable2_reg_i_2_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/CLEAR_IBUF">
+      <obj_property name="ElementShortName">CLEAR_IBUF</obj_property>
+      <obj_property name="ObjectShortName">CLEAR_IBUF</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/CLK_IBUF_BUFG">
+      <obj_property name="ElementShortName">CLK_IBUF_BUFG</obj_property>
+      <obj_property name="ObjectShortName">CLK_IBUF_BUFG</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/DONE">
+      <obj_property name="ElementShortName">DONE</obj_property>
+      <obj_property name="ObjectShortName">DONE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/DONE_Add_Flag2">
+      <obj_property name="ElementShortName">DONE_Add_Flag2</obj_property>
+      <obj_property name="ObjectShortName">DONE_Add_Flag2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/DONE_reg_i_1_n_0">
+      <obj_property name="ElementShortName">DONE_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">DONE_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Tesbench_Pipeline/DUT/CONTROL/E">
+      <obj_property name="ElementShortName">E[0:0]</obj_property>
+      <obj_property name="ObjectShortName">E[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State[0]_i_1_n_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State[0]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State[0]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State[1]_i_1_n_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State[1]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State[1]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State[4]_i_1_n_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State[4]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State[4]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State[5]_i_1_n_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State[5]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State[5]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State[6]_i_1_n_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State[6]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State[6]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State[7]_i_1_n_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State[7]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State[7]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State[8]_i_1_n_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State[8]_i_1_n_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State[8]_i_1_n_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg[11]_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg[11]_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg[11]_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg[8]_0 ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg[8]_0 </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg[8]_0 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[0] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[0] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[0] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[10] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[10] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[10] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[11] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[11] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[11] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[1] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[1] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[1] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[2] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[2] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[2] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[3] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[3] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[3] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[4] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[4] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[4] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[5] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[5] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[5] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[6] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[6] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[6] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[7] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[7] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[7] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[8] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[8] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[8] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/\FSM_onehot_Next_State_reg_n_0_[9] ">
+      <obj_property name="ElementShortName">\FSM_onehot_Next_State_reg_n_0_[9] </obj_property>
+      <obj_property name="ObjectShortName">\FSM_onehot_Next_State_reg_n_0_[9] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Flag_Green">
+      <obj_property name="ElementShortName">Flag_Green</obj_property>
+      <obj_property name="ObjectShortName">Flag_Green</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/FtI_Enable">
+      <obj_property name="ElementShortName">FtI_Enable</obj_property>
+      <obj_property name="ObjectShortName">FtI_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/FtI_Enable_reg_i_1_n_0">
+      <obj_property name="ElementShortName">FtI_Enable_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">FtI_Enable_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/FtI_Enable_reg_i_2_n_0">
+      <obj_property name="ElementShortName">FtI_Enable_reg_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">FtI_Enable_reg_i_2_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/ItF_Enable_In">
+      <obj_property name="ElementShortName">ItF_Enable_In</obj_property>
+      <obj_property name="ObjectShortName">ItF_Enable_In</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/ItF_Enable_In_reg_i_1_n_0">
+      <obj_property name="ElementShortName">ItF_Enable_In_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">ItF_Enable_In_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Mul_Enable_In">
+      <obj_property name="ElementShortName">Mul_Enable_In</obj_property>
+      <obj_property name="ObjectShortName">Mul_Enable_In</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Mul_Enable_In_reg_i_1_n_0">
+      <obj_property name="ElementShortName">Mul_Enable_In_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Mul_Enable_In_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Mul_Enable_In_reg_i_2_n_0">
+      <obj_property name="ElementShortName">Mul_Enable_In_reg_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">Mul_Enable_In_reg_i_2_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg0_Add_Enable_reg_i_1_n_0">
+      <obj_property name="ElementShortName">Reg0_Add_Enable_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Add_Enable_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg0_Add_Enable_reg_i_2_n_0">
+      <obj_property name="ElementShortName">Reg0_Add_Enable_reg_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Add_Enable_reg_i_2_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg0_Add_Enable_reg_i_3_n_0">
+      <obj_property name="ElementShortName">Reg0_Add_Enable_reg_i_3_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Add_Enable_reg_i_3_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg0_Enable">
+      <obj_property name="ElementShortName">Reg0_Enable</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg0_Enable_reg_i_1_n_0">
+      <obj_property name="ElementShortName">Reg0_Enable_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Enable_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg0_Enable_reg_i_2_n_0">
+      <obj_property name="ElementShortName">Reg0_Enable_reg_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Enable_reg_i_2_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg0_Enable_reg_i_3_n_0">
+      <obj_property name="ElementShortName">Reg0_Enable_reg_i_3_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg0_Enable_reg_i_3_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg1_Add_Enable">
+      <obj_property name="ElementShortName">Reg1_Add_Enable</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Add_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg1_Enable">
+      <obj_property name="ElementShortName">Reg1_Enable</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg1_Enable_reg_i_1_n_0">
+      <obj_property name="ElementShortName">Reg1_Enable_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Enable_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg1_Enable_reg_i_2_n_0">
+      <obj_property name="ElementShortName">Reg1_Enable_reg_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg1_Enable_reg_i_2_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg2_Enable">
+      <obj_property name="ElementShortName">Reg2_Enable</obj_property>
+      <obj_property name="ObjectShortName">Reg2_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg2_Enable_reg_i_1_n_0">
+      <obj_property name="ElementShortName">Reg2_Enable_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg2_Enable_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/Reg2_Enable_reg_i_2_n_0">
+      <obj_property name="ElementShortName">Reg2_Enable_reg_i_2_n_0</obj_property>
+      <obj_property name="ObjectShortName">Reg2_Enable_reg_i_2_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/RegOut_Enable">
+      <obj_property name="ElementShortName">RegOut_Enable</obj_property>
+      <obj_property name="ObjectShortName">RegOut_Enable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/RegOut_Enable_reg_i_1_n_0">
+      <obj_property name="ElementShortName">RegOut_Enable_reg_i_1_n_0</obj_property>
+      <obj_property name="ObjectShortName">RegOut_Enable_reg_i_1_n_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Tesbench_Pipeline/DUT/CONTROL/START_IBUF">
+      <obj_property name="ElementShortName">START_IBUF</obj_property>
+      <obj_property name="ObjectShortName">START_IBUF</obj_property>
+   </wvobject>
+</wave_config>
