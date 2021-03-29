@@ -1,8 +1,8 @@
 module RGB_2_GRAY_Pipeline (
-    GRAY,RGB,CLK,CLEAR,ItF_Enable_In,ItF_Enable_Out,Reg0_Enable,Reg1_Enable,Mul_Enable_IN,Add_Enable1,Add_Enable2,Reg2_Enable,FtI_Enable, Mul_Red_Flag,Mul_Green_Flag,Mul_Blue_Flag,DONE_Add_Flag,DONE_Add_Flag1,DONE_Add_Flag2,RegOut_Enable
+    GRAY,RGB,CLK,CLEAR,ItF_Enable_In,Reg0_Enable,Reg1_Enable,Mul_Enable_IN,Add_Enable1,Add_Enable2,Reg2_Enable,FtI_Enable, Mul_Red_Flag,Mul_Green_Flag,Mul_Blue_Flag,DONE_Add_Flag,DONE_Add_Flag1,DONE_Add_Flag2,RegOut_Enable,Reg0_Add_Enable,Reg1_Add_Enable
 );
     input [23:0] RGB;
-    input CLK,CLEAR,ItF_Enable_In,ItF_Enable_Out,Reg0_Enable,Mul_Enable_IN,Reg1_Enable,Reg2_Enable,FtI_Enable,Add_Enable1,Add_Enable2,RegOut_Enable;
+    input CLK,CLEAR,ItF_Enable_In,Reg0_Enable,Mul_Enable_IN,Reg1_Enable,Reg2_Enable,FtI_Enable,Add_Enable1,Add_Enable2,RegOut_Enable,Reg0_Add_Enable,Reg1_Add_Enable;
 
     output [7:0] GRAY;
     output Mul_Red_Flag,Mul_Green_Flag,Mul_Blue_Flag,DONE_Add_Flag,DONE_Add_Flag1,DONE_Add_Flag2;
@@ -25,8 +25,7 @@ module RGB_2_GRAY_Pipeline (
         .Blue_In(RGB[7:0]),
         .CLK(CLK),
         .CLEAR(CLEAR), 
-        .ENABLE_IN(ItF_Enable_In),
-        .ENABLE_OUT(ItF_Enable_Out)
+        .ENABLE_IN(ItF_Enable_In)
     );
 
     Reg_3_in_1 Reg0 (
@@ -79,7 +78,9 @@ module RGB_2_GRAY_Pipeline (
         .CLK(CLK),
         .CLEAR(CLEAR),
         .START_No1(Add_Enable1),
-        .START_No2(Add_Enable2)
+        .START_No2(Add_Enable2),
+        .Reg0_Enable(Reg0_Add_Enable),
+        .Reg1_Enable(Reg1_Add_Enable)
     );
 
     Reg_Pipeline Reg2 (
