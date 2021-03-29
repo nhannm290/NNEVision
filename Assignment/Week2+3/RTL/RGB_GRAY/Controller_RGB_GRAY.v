@@ -1,9 +1,9 @@
 module Controller_RGB_GRAY (
-   DONE,ItF_Enable_In,ItF_Enable_Out,Reg0_Enable,Mul_Enable_In,Reg1_Enable,Add_Enable1,Add_Enable2,Reg2_Enable,FtI_Enable,RegOut_Enable,
-   Mul_Red_Flag,Mul_Green_Flag,Mul_Blue_Flag,DONE_Add_Flag,DONE_Add_Flag1,DONE_Add_Flag2,START,CLK
+   DONE,ItF_Enable_In,Reg0_Enable,Mul_Enable_In,Reg1_Enable,Add_Enable1,Add_Enable2,Reg2_Enable,FtI_Enable,RegOut_Enable,
+   Mul_Red_Flag,Mul_Green_Flag,Mul_Blue_Flag,DONE_Add_Flag,DONE_Add_Flag1,DONE_Add_Flag2,START,CLK,Reg0_Add_Enable,Reg1_Add_Enable
 );
    input wire Mul_Red_Flag,Mul_Green_Flag,Mul_Blue_Flag,DONE_Add_Flag,DONE_Add_Flag1,DONE_Add_Flag2,START,CLK;
-   output reg ItF_Enable_In,ItF_Enable_Out,Reg0_Enable,Mul_Enable_In,Reg1_Enable,Add_Enable1,Add_Enable2,Reg2_Enable,FtI_Enable,RegOut_Enable,DONE;
+   output reg ItF_Enable_In,Reg0_Enable,Mul_Enable_In,Reg1_Enable,Add_Enable1,Add_Enable2,Reg2_Enable,FtI_Enable,RegOut_Enable,DONE,Reg0_Add_Enable,Reg1_Add_Enable;
 
 
    parameter S0 = 4'b0000;
@@ -24,6 +24,8 @@ module Controller_RGB_GRAY (
 
    wire DONE_ADD_PATH1;
    assign DONE_ADD_PATH1 = DONE_Add_Flag1 & DONE_Add_Flag2;
+
+
    reg [3:0] Next_State;
 
    always @(posedge CLK) begin
@@ -39,26 +41,26 @@ module Controller_RGB_GRAY (
          S1: Next_State <= S2;
          S2: Next_State <= S3;
          S3: Next_State <= S4;
-         S4: Next_State <= S5;
-         S5: begin
+         S4: begin
             if (Mul_Flag) begin
-               Next_State <= S6;
+               Next_State <= S5;
             end
             else  begin
+               Next_State <= S4;
+            end
+         end
+         S5: begin
+            if(DONE_ADD_PATH1) begin
+               Next_State <= S6;
+            end
+            else begin
                Next_State <= S5;
             end
          end
-         S6: begin
-            if(DONE_ADD_PATH1) begin
-               Next_State <= S7;
-            end
-            else begin
-               Next_State <= S6;
-            end
-         end
+         S6: Next_State <= S7;
          S7: begin
             if (DONE_Add_Flag) begin
-               Next_State <= S8;
+               Next_State <= 8;
             end
             else begin
                Next_State <= S7;
@@ -72,165 +74,162 @@ module Controller_RGB_GRAY (
    end
 
    always @(Next_State) begin
-      case (Next_State)
-         S0: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S1: begin
-            ItF_Enable_In  <=1'b1;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S2: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=1'b1;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S3: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=1'b1;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <= 0;
-         end
-         S4: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=1'b1;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S5:begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=1'b1;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S6: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=1'b1;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S7: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=1'b1;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S8: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=1'b1;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S9: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=1'b1;
-            RegOut_Enable  <=0;
-            DONE           <=0;
-         end
-         S10: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=1'b1;
-            DONE           <=0;
-         end
-         S11: begin
-            ItF_Enable_In  <=0;
-            ItF_Enable_Out <=0;
-            Reg0_Enable    <=0;
-            Mul_Enable_In  <=0;
-            Reg1_Enable    <=0;
-            Add_Enable1    <=0;
-            Add_Enable2    <=0;
-            Reg2_Enable    <=0;
-            FtI_Enable     <=0;
-            RegOut_Enable  <=0;
-            DONE           <=1'b1;
-         end
-         default: Next_State = S0;
-      endcase
+      if(Next_State ==S0)begin
+         ItF_Enable_In      <=0;
+         Reg0_Enable        <=0;
+         Mul_Enable_In      <=0;
+         Reg1_Enable        <=0;
+         Add_Enable1        <=0;
+         Reg0_Add_Enable    <=0;
+         Reg1_Add_Enable    <=0;
+         Add_Enable2        <=0;
+         Reg2_Enable        <=0;
+         FtI_Enable         <=0;
+         RegOut_Enable      <=0;
+         DONE               <=0;
+         
+      end
+      else if(Next_State ==S1) begin
+         ItF_Enable_In <=1'b1;
+         Reg0_Enable    <=0;
+         Mul_Enable_In  <=0;
+         Reg1_Enable    <=0;
+         Add_Enable1    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=0;
+         FtI_Enable     <=0;
+         RegOut_Enable  <=0;
+         DONE           <=0;
+      end
+      else if(Next_State ==S2) begin
+         ItF_Enable_In <=1'b0;
+         Reg0_Enable    <=1'b1;
+         Mul_Enable_In  <=0;
+         Reg1_Enable    <=0;
+         Add_Enable1    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=0;
+         FtI_Enable     <=0;
+         RegOut_Enable  <=0;
+         DONE           <= 0;
+      end
+      else if(Next_State ==S3) begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable    <=0;
+         Mul_Enable_In  <=1'b1;
+         Reg1_Enable    <=0;
+         Add_Enable1    <=0;
+         Reg0_Add_Enable    <=0;
+         Reg1_Add_Enable    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=0;
+         FtI_Enable     <=0;
+         RegOut_Enable  <=0;
+         DONE           <=0;
+      end
+      else if(Next_State ==S4)begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable    <=0;
+         Mul_Enable_In  <=0;
+         Reg1_Enable    <=1'b1;
+         Add_Enable1    <=0;
+         Reg0_Add_Enable    <=0;
+         Reg1_Add_Enable    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=0;
+         FtI_Enable     <=0;
+         RegOut_Enable  <=0;
+         DONE           <=0;
+      end
+      else if(Next_State ==S5) begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable    <=0;
+         Mul_Enable_In  <=0;
+         Reg1_Enable    <=0;
+         Add_Enable1    <=1'b1;
+         Reg0_Add_Enable    <=0;
+         Reg1_Add_Enable    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=0;
+         FtI_Enable     <=0;
+         RegOut_Enable  <=0;
+         DONE           <=0;
+      end
+      else if(Next_State ==S6) begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable        <=0;
+         Mul_Enable_In      <=0;
+         Reg1_Enable        <=0;
+         Add_Enable1        <=0;
+         Reg0_Add_Enable    <=1'b1;
+         Reg1_Add_Enable    <=1'b1;
+         Add_Enable2        <=0;
+         Reg2_Enable        <=0;
+         FtI_Enable         <=0;
+         RegOut_Enable      <=0;
+         DONE               <=0;
+      end
+      else if(Next_State ==S7) begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable        <=0;
+         Mul_Enable_In      <=0;
+         Reg1_Enable        <=0;
+         Add_Enable1        <=0;
+         Reg0_Add_Enable    <=0;
+         Reg1_Add_Enable    <=0;
+         Add_Enable2        <=1'b1;
+         Reg2_Enable        <=0;
+         FtI_Enable         <=0;
+         RegOut_Enable      <=0;
+         DONE               <=0;
+      end
+      else if(Next_State ==S8) begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable    <=0;
+         Mul_Enable_In  <=0;
+         Reg1_Enable    <=0;
+         Add_Enable1    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=1'b1;
+         FtI_Enable     <=0;
+         RegOut_Enable  <=0;
+         DONE           <=0;
+      end
+      else if(Next_State ==S9) begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable    <=0;
+         Mul_Enable_In  <=0;
+         Reg1_Enable    <=0;
+         Add_Enable1    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=0;
+         FtI_Enable     <=1'b1;
+         RegOut_Enable  <=0;
+         DONE           <=0;
+      end
+      else if(Next_State ==S10) begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable    <=0;
+         Mul_Enable_In  <=0;
+         Reg1_Enable    <=0;
+         Add_Enable1    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=0;
+         FtI_Enable     <=0;
+         RegOut_Enable  <=1'b1;
+         DONE           <=0;
+      end
+      else if(Next_State ==S11) begin
+         ItF_Enable_In  <=0;
+         Reg0_Enable    <=0;
+         Mul_Enable_In  <=0;
+         Reg1_Enable    <=0;
+         Add_Enable1    <=0;
+         Add_Enable2    <=0;
+         Reg2_Enable    <=0;
+         FtI_Enable     <=0;
+         RegOut_Enable  <=0;
+         DONE           <=1'b1;
+      end 
    end
-
 endmodule
