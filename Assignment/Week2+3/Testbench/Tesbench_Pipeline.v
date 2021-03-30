@@ -25,6 +25,7 @@ module Tesbench_Pipeline (
             Check=$fscanf(Input_File,"%h\n", RGB);    
             #16
             START = 0;
+	    #16;
             for(i = 32'd1;i <32'd20; i = i +1'd1) begin
                 #16;               
             end
