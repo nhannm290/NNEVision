@@ -12,23 +12,25 @@
 *   2 Converts: Float_to_Int, Int_to_Float
 *   More Detail check FPU Folder.
 ## 5. RGB_2_GRAY:
-* 1 pixel RGB take 19 Cycles to make 1 pixel GRAY.
+* 1 pixel RGB take 19 Cycles to make 1 pixel GRAY 
+  * ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_GIT/Run_Waveform.png)   
 * Result is stored in "binmap.out" file.
 * Error:
     * Max: 1'b1.
     * Min: 1'b0.
 * Datapath: ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_Git/RGB_Datapath.png)
+* Source:
+    * Synthesis:   ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_GIT/Source_Synthesis.png)
+    * Implement:   ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_GIT/Source_Implement.png)
+* Power: ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_GIT/Power.png)
 ## 6. Imange:
 We use image 800x533 pixel to run Example:
-![Messi_RGB](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/messi.jpg)
+![Messi_RGB](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Data_Test/Image/Messi/messi.jpg)
 ## Result:
 * The result is stored in bitmap.out and it is converted to RGB.png 
-![Messi_GRAY](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/RGB.png)
+![Messi_GRAY](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Data_Test/Image/Messi/RGB.png)
 * To check the Error: Run Check.py in Python Folder
 * The Error is also converted to Image:
-![ERROR_IMAGE](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/Result.png)
-* Because the Error Value only 1 so, to see the Error Pixel we must multiply it with 255
-* The Result is below
-![Find_Error](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/Result_Error.jpg)
+![ERROR_IMAGE](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Data_Test/Image/Messi/Result_Error.jpg)
 ## 7. Run All in One:
-* Still working 
+
