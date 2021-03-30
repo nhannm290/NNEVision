@@ -26,12 +26,10 @@ module Tesbench_Pipeline (
             #16
             START = 0;
 	    #16;
-            for(i = 32'd1;i <32'd20; i = i +1'd1) begin
-                #16;               
-            end
-            if (COUNT !=1'd0) begin
-                $fdisplay(Output_File, "%h", GRAY);
-            end
+            while (DONE != 1'd1) begin
+		#16;    
+	    end
+	    $fdisplay(Output_File, "%h", GRAY);
             COUNT= COUNT+1'd1;
             CLEAR = 0;	
         end
