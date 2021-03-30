@@ -17,7 +17,7 @@
 * Error:
     * Max: 1'b1.
     * Min: 1'b0.
-* Datapath: ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/RGB_Datapath.png)
+* Datapath: ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_Git/RGB_Datapath.png)
 ## 6. Imange:
 We use image 800x533 pixel to run Example:
 ![Messi_RGB](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2/messi.jpg)
