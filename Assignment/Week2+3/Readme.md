@@ -18,7 +18,8 @@
 * Error:
     * Max: 1'b1.
     * Min: 1'b0.
-* Datapath: ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_Git/RGB_Datapath.png)
+* Datapath: 
+  * ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_GIT/RGB_Datapath.png)
 * Source:
     * Synthesis:   ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_GIT/Source_Synthesis.png)
     * Implement:   ![alt text](https://github.com/nhannm290/NNL/blob/main/Assignment/Week2%2B3/Image_for_GIT/Source_Implement.png)
