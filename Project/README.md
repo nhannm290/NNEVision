@@ -1,30 +1,31 @@
 # Convolutional Neural Networks
-Mạng Nơ-ron tích chập (Convolutional Neural Networks) còn được gọi là CNNs hay ConvNets bao gồm lớp đầu vào và lớp đầu ra và bên trong là những lớp ẩn (hidden layers). 
+Convolutional Neural Networks is called CNNs or ConvNets include input layer and output layer and hidden layers. 
 
-Các lớp ẩn của mạng thường bao gồm: Nhiều lớp tích chập (Convolutional), lớp tổng hợp (Pooling), lớp kết nối đầy đủ (Fully connected), và theo sau các lớp ẩn là các hàm kích hoạt,(ReLU,SOFTMAX…)
+Hidden layers include: Convolutional, Pooling, Fully connected, and some activation layer(ReLU,SOFTMAX…)
 ![image](https://user-images.githubusercontent.com/80024215/115451412-5c4f2300-a247-11eb-947a-bb1746d44ff1.png)
-## Quá trình tích chập (Convolution)
+## Convolution
 ![Convolution_schematic](https://user-images.githubusercontent.com/80024215/115451561-8c96c180-a247-11eb-83f5-261270f77cfb.gif)
 
 
 
-## Pooling (Quá trình tổng hợp)
-- Thường được sử dụng ngay sau lớp convulational để đơn giản hóa thông tin đầu ra để giảm bớt số lượng neuron.
-- Thông thường có hai loại Max-pooling và Average-pooling.
-- Max-pooling: Lấy giá trị lớn nhất của lớp tích chập.
-- Average-pooling: Lấy giá trị trung bình của lớp tích chập.
+## Pooling
+- Use after convulational layer to simplify output information and reduces number of neuron.
+- Include two type: Max-pooling and Average-pooling.
+- Max-pooling: Get maximun value of Convolutional Layer.
+- Average-pooling: Get average value of Convolutional Layer.
 
 ![image](https://user-images.githubusercontent.com/80024215/115450758-86541580-a246-11eb-85ba-f967d53856a1.png)
-- Ví dụ trong hình trên:
+- Example with above picture:
 
-  Max-pooling có giá trị là 112
+  Value of Max-pooling is 112
 
-  Average-pooling có giá trị là 30
-## Fully Connected Layer – Lớp kết nối đầy đủ
--	Các lớp kết nối đầy đủ lấy hình ảnh đã lọc ở cấp cao (Convolution và Pooling) và chuyển chúng thành phiếu bầu (vote). Mỗi giá trị bỏ phiếu riêng bầu cho hình ảnh cần nhận diện.
-## Bước nhảy - Stride
-- Stride là số pixel thay đổi trên ma trận đầu vào. 
-- Khi stride là 1 thì ta di chuyển các kernel 1 pixel. Khi stride là 2 thì ta di chuyển các kernel đi 2 pixel và tiếp tục như vậy.
+  Value of Average-pooling is 30
+## Fully Connected Layer 
+-	The fully connected layers take high-level filtered images (Convolution and Pooling) and convert them into votes. Each vote value individually votes for the image to be identified.
+## Stride
+- Stride is the number of pixels changed on the input matrix. 
+- When stride is 1 we move the kernels by 1 pixel. When stride is 2 we move the kernels 2 pixels away and so on.
+![image](https://images.deepai.org/django-summernote/2019-06-03/56e53bc1-bac3-48f4-a08c-dce77a57464b.png)
 ## Đường viền - Padding
 ## Các hàm kích hoạt
 ### Rectified Linear Units – ReLU (Tinh chỉnh các đơn vị tuyến tính)
