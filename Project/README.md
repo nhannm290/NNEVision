@@ -36,7 +36,7 @@ Các thông số cơ bản về kiến trúc Xception:
 
   INPUT ảnh 299x299x3
 
-  OUTPUT
+  OUTPUT(Floating Point)
 
   Số lớp Layer 70
 
