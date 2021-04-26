@@ -32,7 +32,7 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 | **Mode**        | Valid           | Same  | Full|
 | :------------- |:-------------:| :-----:| :---:|
 | **Value**      | ![image](https://user-images.githubusercontent.com/80077471/116117199-2cd86480-a6e6-11eb-84dc-11e2be71a31f.png) | ![image](https://user-images.githubusercontent.com/80077471/116117437-7032d300-a6e6-11eb-88c5-f3c2734330f3.png) |![image](https://user-images.githubusercontent.com/80077471/116117540-8c367480-a6e6-11eb-9a12-088bf0b65fa6.png)|
-| **Illustration**      | ![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-valid-a.png?1f58d78612f6202ce201620919d71609)      | ![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-same-a.png?8b680283b10a6e131209b74e21a61213)  |asdasd|
+| **Illustration**      | ![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-valid-a.png?1f58d78612f6202ce201620919d71609)      | ![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-same-a.png?8b680283b10a6e131209b74e21a61213)  |![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-full-a.png?b51e98467c8a77574c7e8f108654ad95)|
 | **Purpose** | are neat      |    $1 |dasdasdasd|
 
 ## Các hàm kích hoạt
