@@ -29,12 +29,12 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 ## Padding
 - Zero-padding denotes the process of adding PP zeroes to each side of the boundaries of the input. This value can either be manually specified or automatically set through one of the three modes detailed below:
 
-| First Header  | Second Header |
+| Mode  | Second Header |
 |  | |
-| Content Cell  | Content Cell  |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Value  | Content Cell  |
+| Illustration | ------------- |
+| Purpose  | Content Cell  |
+
 
 ## Các hàm kích hoạt
 ### Rectified Linear Units – ReLU (Tinh chỉnh các đơn vị tuyến tính)
