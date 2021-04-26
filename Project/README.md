@@ -41,6 +41,9 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 ![image](https://user-images.githubusercontent.com/80077471/116118646-bc324780-a6e7-11eb-8632-3b47fa6f0f32.png)
 - How does the ReLU work
 ![image](https://user-images.githubusercontent.com/80024215/115451328-3fb2eb00-a247-11eb-800c-ca71437673ca.png)
+### Softmax
+The softmax step can be seen as a generalized logistic function that takes as input a vector of scores ![image](https://user-images.githubusercontent.com/80077471/116120029-4fb84800-a6e9-11eb-9b7d-6d22c239622c.png)
+
 
 # Xception Architecture
 Xception Architecture Specifications:
