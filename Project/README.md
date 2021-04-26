@@ -43,6 +43,7 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 ![image](https://user-images.githubusercontent.com/80024215/115451328-3fb2eb00-a247-11eb-800c-ca71437673ca.png)
 ### Softmax
 - The softmax step can be seen as a generalized logistic function that takes as input a vector of scores ![image](https://user-images.githubusercontent.com/80077471/116120029-4fb84800-a6e9-11eb-9b7d-6d22c239622c.png) and outputs a vector of output probability ![image](https://user-images.githubusercontent.com/80077471/116120151-6d85ad00-a6e9-11eb-996b-e77e34cea914.png) through a softmax function at the end of the architecture. It is defined as follows:
+![image](https://user-images.githubusercontent.com/80077471/116120219-83936d80-a6e9-11eb-99b0-98e4a731554f.png)
 
 
 
