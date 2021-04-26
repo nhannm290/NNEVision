@@ -32,7 +32,7 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 | Mode  | Second Header |
 |  | |
 | Value  | Content Cell  |
-| Illustration | ------------- |
+| Illustration | sdasdasd |
 | Purpose  | Content Cell  |
 
 
