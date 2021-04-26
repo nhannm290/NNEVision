@@ -28,7 +28,12 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 ![image](https://images.deepai.org/django-summernote/2019-06-03/56e53bc1-bac3-48f4-a08c-dce77a57464b.png)
 ## Padding
 - Zero-padding denotes the process of adding PP zeroes to each side of the boundaries of the input. This value can either be manually specified or automatically set through one of the three modes detailed below:
-![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-valid-a.png?1f58d78612f6202ce201620919d71609)
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 ## Các hàm kích hoạt
 ### Rectified Linear Units – ReLU (Tinh chỉnh các đơn vị tuyến tính)
