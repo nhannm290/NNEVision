@@ -43,18 +43,18 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 ![image](https://user-images.githubusercontent.com/80024215/115451328-3fb2eb00-a247-11eb-800c-ca71437673ca.png)
 
 # Xception Architecture
-Các thông số cơ bản về kiến trúc Xception:
+Xception Architecture Specifications:
 
-  INPUT ảnh 299x299x3
+  INPUT image 299x299x3
 
   OUTPUT(Floating Point)
 
-  Số lớp Layer 70
+  Number of Layer: 70
 
-  Số Parameters sử dụng: 22,910,480
+  Parameters used: 22,910,480
 
 ![image](https://user-images.githubusercontent.com/80024215/115450056-a6370980-a245-11eb-967b-ce68b3d3ef2a.png)
-## So sánh tương quan giữa các mạng
+## Correlation Comparison Between Betworks
  ![image](https://user-images.githubusercontent.com/80024215/115452348-848b5180-a248-11eb-9ac0-bc9f2a11d284.png)
 Hình ảnh đưa ra sự so sánh về kiến trúc Xception với những kiến trúc khác cho thấy Xception tối ưu hơn những thuật toán còn lại về Size, Top Accuracy, Parameters,...
 
