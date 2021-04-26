@@ -62,5 +62,5 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 ![image](https://user-images.githubusercontent.com/80024215/115450056-a6370980-a245-11eb-967b-ce68b3d3ef2a.png)
 ## Correlation Comparison Between Betworks
  ![image](https://user-images.githubusercontent.com/80024215/115452348-848b5180-a248-11eb-9ac0-bc9f2a11d284.png)
-Hình ảnh đưa ra sự so sánh về kiến trúc Xception với những kiến trúc khác cho thấy Xception tối ưu hơn những thuật toán còn lại về Size, Top Accuracy, Parameters,...
+Pictures showing a comparison of Xception architectures with other architectures show that Xception is more optimal than the rest of the algorithms in terms of Size, Top Accuracy, Parameters, ...
 
