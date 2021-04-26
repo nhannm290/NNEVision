@@ -33,7 +33,7 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 | :------------- |:-------------:| :-----:| :---:|
 | **Value**      | ![image](https://user-images.githubusercontent.com/80077471/116117199-2cd86480-a6e6-11eb-84dc-11e2be71a31f.png) | ![image](https://user-images.githubusercontent.com/80077471/116117437-7032d300-a6e6-11eb-88c5-f3c2734330f3.png) |![image](https://user-images.githubusercontent.com/80077471/116117540-8c367480-a6e6-11eb-9a12-088bf0b65fa6.png)|
 | **Illustration**      | ![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-valid-a.png?1f58d78612f6202ce201620919d71609)      | ![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-same-a.png?8b680283b10a6e131209b74e21a61213)  |![image](https://stanford.edu/~shervine/teaching/cs-230/illustrations/padding-full-a.png?b51e98467c8a77574c7e8f108654ad95)|
-| **Purpose** | are neat      |    $1 |dasdasdasd|
+| **Purpose** | ![image](https://user-images.githubusercontent.com/80077471/116118273-4fb74880-a6e7-11eb-8506-6a0b7b9ba01e.png)    |   ![image](https://user-images.githubusercontent.com/80077471/116118212-45954a00-a6e7-11eb-94f6-532c57bae3b0.png) |![image](https://user-images.githubusercontent.com/80077471/116118317-5a71dd80-a6e7-11eb-921f-384a8bbd1dc9.png)|
 
 ## Các hàm kích hoạt
 ### Rectified Linear Units – ReLU (Tinh chỉnh các đơn vị tuyến tính)
