@@ -29,11 +29,34 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 ## Padding
 - Zero-padding denotes the process of adding PP zeroes to each side of the boundaries of the input. This value can either be manually specified or automatically set through one of the three modes detailed below:
 
-| Tables        | Are           | Cool  | Full|
-| ------------- |:-------------:| -----:| :---:|
-| col 3 is      | right-aligned | $1600 | sadasd|
-| col 2 is      | centered      |   $12 | ádasda|
-| zebra stripes | are neat      |    $1 | ưqeaaa|
+| **Mode**        | Valid           | Same | Full|
+| :------------- |:-------------:| :-----:| :---:|
+| **Value**      | P=0 | P 
+start
+​	
+ =⌊ 
+2
+S⌈ 
+S
+I
+​	
+ ⌉−I+F−S
+​	
+ ⌋
+P_\text{end} = \Bigl\lceil\frac{S \lceil\frac{I}{S}\rceil - I + F - S}{2}\Bigr\rceilP 
+end
+​	
+ =⌈ 
+2
+S⌈ 
+S
+I
+​	
+ ⌉−I+F−S
+​	
+ ⌉ | sadasd|
+| **Illustration** | centered      |   $12 | ádasda|
+| **Purpose** | are neat      |    $1 | ưqeaaa|
 
 
 ## Các hàm kích hoạt
