@@ -52,6 +52,7 @@ Xception Architecture Specifications:
   Number of Layer: 70
 
   Parameters used: 22,910,480
+## Basic Flow Of Xception Architecture
 
 ![image](https://user-images.githubusercontent.com/80024215/115450056-a6370980-a245-11eb-967b-ce68b3d3ef2a.png)
 ## Correlation Comparison Between Betworks
