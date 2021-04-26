@@ -38,6 +38,8 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 ## Commonly used activation functions
 ### Rectified Linear Units – ReLU 
 -	The rectified linear unit layer (ReLU) is an activation function ![image](https://user-images.githubusercontent.com/80077471/116118546-a15fd300-a6e7-11eb-84cc-0f20f340eb88.png) that is used on all elements of the volume. It aims at introducing non-linearities to the network. Its variants are summarized in the table below:
+![image](https://user-images.githubusercontent.com/80077471/116118646-bc324780-a6e7-11eb-8632-3b47fa6f0f32.png)
+#### How does the ReLU work
 ![image](https://user-images.githubusercontent.com/80024215/115451328-3fb2eb00-a247-11eb-800c-ca71437673ca.png)
 
 # Xception Architecture
