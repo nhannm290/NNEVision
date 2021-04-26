@@ -31,9 +31,9 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 
 | **Tables**        | Are           | Cool  | |Full|
 |:---|:-------------:| :-----:| |:---:|
-| **Value**      | right-aligned | $1600 |
-| **Illustration**      | centered      |   $12 |
-| **Purpose** | are neat      |    $1 |
+| **Value**      | right-aligned | $1600 | | 2131|
+| **Illustration**      | centered      |   $12 | |sadasd|
+| **Purpose** | are neat      |    $1 | |sadasd|
 
 
 ## Các hàm kích hoạt
