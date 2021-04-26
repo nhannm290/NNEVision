@@ -31,7 +31,7 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 
 | **Mode**        | Are           | Cool  | Full|
 | :------------- |:-------------:| :-----:| :---:|
-| **Value**      | ![image](https://user-images.githubusercontent.com/80077471/116117199-2cd86480-a6e6-11eb-84dc-11e2be71a31f.png) | ![image](https://user-images.githubusercontent.com/80077471/116117437-7032d300-a6e6-11eb-88c5-f3c2734330f3.png) |asdasdasd|
+| **Value**      | ![image](https://user-images.githubusercontent.com/80077471/116117199-2cd86480-a6e6-11eb-84dc-11e2be71a31f.png) | ![image](https://user-images.githubusercontent.com/80077471/116117437-7032d300-a6e6-11eb-88c5-f3c2734330f3.png) |![image](https://user-images.githubusercontent.com/80077471/116117540-8c367480-a6e6-11eb-9a12-088bf0b65fa6.png)|
 | **Illustration**      | centered      |   $12 |asdasd|
 | **Purpose** | are neat      |    $1 |dasdasdasd|
 
