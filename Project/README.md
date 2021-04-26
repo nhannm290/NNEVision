@@ -26,7 +26,9 @@ Hidden layers include: Convolutional, Pooling, Fully connected, and some activat
 - Stride is the number of pixels changed on the input matrix. 
 - When stride is 1 we move the kernels by 1 pixel. When stride is 2 we move the kernels 2 pixels away and so on.
 ![image](https://images.deepai.org/django-summernote/2019-06-03/56e53bc1-bac3-48f4-a08c-dce77a57464b.png)
-## Đường viền - Padding
+## Padding
+- Zero-padding denotes the process of adding PP zeroes to each side of the boundaries of the input. This value can either be manually specified or automatically set through one of the three modes detailed below:
+
 ## Các hàm kích hoạt
 ### Rectified Linear Units – ReLU (Tinh chỉnh các đơn vị tuyến tính)
 -	Bất cứ nơi nào có số âm, hoán đổi nó với 0. Điều này giúp CNN giữ vững sự tin cậy toán học bằng cách giữ các giá trị đã được học khỏi bị mắc kẹt gần 0 hoặc về vô tận.
