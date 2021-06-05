@@ -43,7 +43,7 @@ module Convo_Core_3x3(
          input clk,
          input rst,
          output [31:0] Data_Out,
-         output reg Valid_Out
+         output Valid_Out
          
       );
       reg [31:0] Counter =0;
