@@ -77,7 +77,7 @@ module Convo_Core_3x3(
             .Data_In({{mul0,mul1,mul2,mul3,mul4,mul5,mul6,mul7,mul8}}),
             .clk(clk),
             .rst(rst),
-            .enable(),
+            .enable(Valid_In),
             .Data_Out({reg0_Out1,reg0_Out2,reg0_Out3,reg0_Out4,reg0_Out5,reg0_Out6,reg0_Out7,reg0_Out8,reg0_Out9})
       );
       wire [31:0] add0_Out0,add0_Out1,add0_Out2,add0_Out3;
