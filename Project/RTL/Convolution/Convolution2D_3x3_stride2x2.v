@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-   module Convolution2D_3x3_stride2x2 #(parameter IMG_WIDHT = 299,parameter IMG_HEIGHT = 299)
+   module Convolution2D_3x3_stride2x2 #(parameter IMG_WIDHT = 30,parameter IMG_HEIGHT = 30)
    (
       input [31:0] Data_In, 
       input [31:0] Kernel0,
@@ -40,7 +40,7 @@
 
    );
 
-   wire [31:0] kernel_Data_Out1,kernel_Data_Out2,kernel_Data_Out3,kernel_Data_Out4,kernel_Data_Out5,kernel_Data_Out6,kernel_Data_Out7,kernel_Data_Out8,kernel_Data_Out9
+   wire [31:0] kernel_Data_Out1,kernel_Data_Out2,kernel_Data_Out3,kernel_Data_Out4,kernel_Data_Out5,kernel_Data_Out6,kernel_Data_Out7,kernel_Data_Out8,kernel_Data_Out9;
    wire kernal_Valid_Out;
 
 
@@ -48,7 +48,7 @@
    Kernel_3x3_stride_2x2 #(.DATA_WIDHT(32),.IMG_WIDHT(IMG_WIDHT),.IMG_HEIGHT(IMG_HEIGHT))
    kernel   (
       .Data_In(Data_In),
-      .Valid_In(Valid_In),
+      .Valid_in(Valid_In),
       .clk(clk),
       .rst(rst),
       .Data_Out1(kernel_Data_Out1),
@@ -65,7 +65,7 @@
    wire [31:0] Convo_Data_Out;
    wire Convo_Valid_Out;
    
-   Convo_Core core(
+   Convo_Core_3x3 core(
       .Data_In0(kernel_Data_Out1),
       .Data_In1(kernel_Data_Out2),
       .Data_In2(kernel_Data_Out3),
@@ -90,7 +90,7 @@
       .Data_Out(Convo_Data_Out),
       .Valid_Out(Convo_Valid_Out) 
    );
-   Counter_Pixel #(.IMG_WIDTH(IMG_WIDTH/2),.IMG_HEIGHT(IMG_HEIGHT/2))
+   Counter_Pixel #(.IMG_WIDTH(IMG_WIDHT/2),.IMG_HEIGHT(IMG_HEIGHT/2))
          counter (
             .Data_In(Convo_Valid_Out),
             .clk(clk),
