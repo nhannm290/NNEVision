@@ -115,6 +115,5 @@ module Find_Max_3x3 (
             .Data_Out({reg3_Data_Out0,reg3_Data_Out1})
         );
     // 4F Pipeline
-    
 
 endmodule
