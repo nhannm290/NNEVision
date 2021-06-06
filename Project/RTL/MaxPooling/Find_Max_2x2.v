@@ -1,34 +1,12 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05/12/2021 03:44:43 PM
-// Design Name: 
-// Module Name: Max_Value
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-module Max_Value(
-    input [31:0] Data_A,
-    input [31:0] Data_B,
-    input [31:0] Data_C,
-    input [31:0] Data_D,
+module Find_Max_2x2 #(parameter DATA_WIDHT =32)(
+    input [DATA_WIDHT-1:0] Data_A,
+    input [DATA_WIDHT-1:0] Data_B,
+    input [DATA_WIDHT-1:0] Data_C,
+    input [DATA_WIDHT-1:0] Data_D,
     input Valid_In,
     input clk,
     input rst,
-    output [31:0] Data_Out,
+    output [DATA_WIDHT-1:0] Data_Out,
     output Valid_Out
     );
     
@@ -37,12 +15,11 @@ module Max_Value(
     wire [31:0] mux3_Data_Out; 
     reg [31:0] Counter =0;
     
-    //assign Data_Out = (Counter ==4)? add3_Out:8'dz;
+    
     assign Valid_Out= (Counter ==3 && Valid_In ==1)? 1'd1:1'd0;
     always @(posedge clk or negedge rst) begin
         if(~rst) begin 
             Counter <=0;
-            
         end
         else if (Valid_In ==1 && Counter !=3) Counter <= Counter +1'd1;
         else if (Valid_In ==1 && Counter ==3) Counter <= Counter;
@@ -125,4 +102,5 @@ module Max_Value(
             .enable(1'b1),
             .Data_Out(Data_Out)
         );
+    
 endmodule
