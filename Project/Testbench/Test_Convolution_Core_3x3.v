@@ -55,58 +55,7 @@ module Test_Convolution_Core_3x3(
         Data_In7 = 32'h3fe39581;// 1.778
         Data_In8 = 32'h40766666; // 3.85
         Data_In9 = 32'h40c722d1; //6.223
-	// #Period
-	// Data_In1 = 8'd123;
-        // Data_In2 = 8'd233 ;
-        // Data_In3 = 8'd110 ;
-        // Data_In4 = 8'd145;
-        // Data_In5 = 8'd98;
-        // Data_In6 = 8'd155;
-        // Data_In7 = 8'd198;
-        // Data_In8 = 8'd231;
-        // Data_In9 = 8'd164;
-	// #Period
-	// Data_In1 = 8'd23;
-        // Data_In2 = 8'd223 ;
-        // Data_In3 = 8'd190 ;
-        // Data_In4 = 8'd45;
-        // Data_In5 = 8'd98;
-        // Data_In6 = 8'd55;
-        // Data_In7 = 8'd98;
-        // Data_In8 = 8'd231;
-        // Data_In9 = 8'd64;
-	// #Period
-	// Data_In1 = 8'd233;
-        // Data_In2 = 8'd203 ;
-        // Data_In3 = 8'd105 ;
-        // Data_In4 = 8'd15;
-        // Data_In5 = 8'd98;
-        // Data_In6 = 8'd158;
-        // Data_In7 = 8'd180;
-        // Data_In8 = 8'd231;
-        // Data_In9 = 8'd145;
-	// Valid_In = 0;
-	// #Period
-	// Data_In1 = 8'd33;
-        // Data_In2 = 8'd203 ;
-        // Data_In3 = 8'd152 ;
-        // Data_In4 = 8'd195;
-        // Data_In5 = 8'd98;
-        // Data_In6 = 8'd181;
-        // Data_In7 = 8'd103;
-        // Data_In8 = 8'd231;
-        // Data_In9 = 8'd245;
-	// Valid_In = 1;
-	// #Period
-	// Data_In1 = 8'd131;
-        // Data_In2 = 8'd203 ;
-        // Data_In3 = 8'd35 ;
-        // Data_In4 = 8'd15;
-        // Data_In5 = 8'd198;
-        // Data_In6 = 8'd158;
-        // Data_In7 = 8'd88;
-        // Data_In8 = 8'd231;
-        // Data_In9 = 8'd45;
+	
         #1000 $finish;
     end
     always #CLK clk =~clk;
