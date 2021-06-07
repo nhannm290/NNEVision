@@ -29,7 +29,6 @@ module Test_Convolution_Core_3x3(
     parameter Kernel = 3;
     
     reg [DATA_WIDHT-1:0] Data_In1,Data_In2,Data_In3,Data_In4,Data_In5,Data_In6,Data_In7,Data_In8,Data_In9;
-    wire 
     reg Valid_In,clk,rst;
     
     wire [DATA_WIDHT-1:0] Data_Out;
@@ -59,7 +58,7 @@ module Test_Convolution_Core_3x3(
         #1000 $finish;
     end
     always #CLK clk =~clk;
-    Convo_Core_3x3#(.DATA_WIDHT(DATA_WIDHT))
+    Convo_Core_3x3
         DUT (
                 .Data_In0(Data_In1),
                 .Data_In1(Data_In2),
@@ -74,11 +73,11 @@ module Test_Convolution_Core_3x3(
                 .Kernel1(32'h40000000),//2
                 .Kernel2(32'h40400000),//3
                 .Kernel3(32'h40800000),//4
-                .Kernel4(32'h40a00000),
-                .Kernel5(32'h40c00000),
-                .Kernel6(32'h40e00000),
-                .Kernel7(32'h41000000),
-                .Kernel8(32'h41100000),
+                .Kernel4(32'h40a00000),//5
+                .Kernel5(32'h40c00000),//6
+                .Kernel6(32'h40e00000),//7
+                .Kernel7(32'h41000000),//8
+                .Kernel8(32'h41100000),//9
                 .Valid_In(Valid_In),
                 .clk(clk),
                 .rst(rst),

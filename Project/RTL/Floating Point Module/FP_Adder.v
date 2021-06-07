@@ -38,7 +38,7 @@ module FP_Adder(
     wire [23:0] large_frac24 = {fp_large_hidden_bit,fp_large[22:0]};
     wire [23:0] small_frac24 = {fp_small_hidden_bit,fp_small[22:0]};
     wire [ 7:0] temp_exp = fp_large[30:23];
-    wire        sign = exchange? Mode ^Data_B[31] : Data_A[31];
+    wire        sign = exchange? Mode ^ Data_B[31] : Data_A[31];
     wire        op_Mode = Mode ^fp_large[31] ^ fp_small[31];
     wire        fp_large_expo_is_ff = &fp_large[30:23];
     wire        fp_small_expo_is_ff = &fp_small[30:23];
@@ -101,7 +101,7 @@ module FP_Adder(
     
     wire [24:0] frac_round = {1'b0,frac0[26:3]} + frac_plus_1;
     wire [ 7:0] exponent = frac_round[24]? exp0 + 8'h1 : exp0;
-    wire        overflow = frac_round[24]? exp0 + 8'h1 : exp0;
+    wire        overflow =  &exp0 | &exponent;
     wire [31:0] Temp;
     
     assign Temp = final_result(overflow,RMode,sign,Data_Out_is_nan,Data_Out_is_inf,exponent,frac_round[22:0],inf_nan_frac[22:0]);
