@@ -1,0 +1,9 @@
+module name_module #(parameter IMG_WIDHT =15,parameter IMG_HEIGHT = 15,parameter IMG_DEPTH = 32)
+(
+    input [95:0] Data_In,
+    input Valid_In,
+    input clk,
+    input rst,
+    output [31:0] Data_Out,
+    output Valid_Out 
+)
