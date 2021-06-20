@@ -59,7 +59,7 @@ module Find_Max_3x3 (
             .Data_In({mux0_Data_Out0,mux0_Data_Out1,mux0_Data_Out2,mux0_Data_Out3,Data_In8}),
             .clk(clk),
             .rst(rst),
-            .enable(enable),
+            .enable(1'b1),
             .Data_Out({reg0_Data_Out0,reg0_Data_Out1,reg0_Data_Out2,reg0_Data_Out3,reg0_Data_Out4})
         );
     // 2F Pipeline
@@ -93,7 +93,7 @@ module Find_Max_3x3 (
             .Data_In({mux1_Data_Out0,mux1_Data_Out1,reg0_Data_Out4}),
             .clk(clk),
             .rst(rst),
-            .enable(Valid_In),
+            .enable(1'b1),
             .Data_Out({reg1_Data_Out0,reg1_Data_Out1,reg1_Data_Out2})
         );
     // 3F Pipeline

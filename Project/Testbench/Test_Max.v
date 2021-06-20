@@ -60,8 +60,7 @@ module Test_Max(
         Data_In6 = 32'hc2c80000; //-100
         Data_In7 = 32'h401c28f6; //2.44
         Data_In8 = 32'h40f570a4; //7.67
-        #CLK
-        Valid_In = 0;
+
     end
     always #CLK clk =~clk;
     Find_Max_3x3 DUT(
