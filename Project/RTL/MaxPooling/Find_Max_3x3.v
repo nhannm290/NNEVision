@@ -32,6 +32,7 @@ module Find_Max_3x3 (
     // 1F Pipeline
     wire [31:0] sub0_Data_Out0,sub0_Data_Out1,sub0_Data_Out2,sub0_Data_Out3;
 
+
     FP_Adder sub0[3:0] (
         .Data_A({Data_In0,Data_In2,Data_In4,Data_In6}),
         .Data_B({Data_In1,Data_In3,Data_In5,Data_In7}),
@@ -62,6 +63,16 @@ module Find_Max_3x3 (
             .enable(1'b1),
             .Data_Out({reg0_Data_Out0,reg0_Data_Out1,reg0_Data_Out2,reg0_Data_Out3,reg0_Data_Out4})
         );
+
+    wire [31:0] reg0_Data_Out4_delay;
+    nbit_Dff #(.DATA_WIDHT(32))
+        reg0_delay (
+            .Data_In(reg0_Data_Out4),
+            .clk(clk),
+            .rst(rst),
+            .enable(1'b1),
+            .Data_Out(reg0_Data_Out4_delay)
+        );
     // 2F Pipeline
 
     wire [31:0] sub1_Data_Out0,sub1_Data_Out1;
@@ -90,10 +101,10 @@ module Find_Max_3x3 (
 
     nbit_Dff #(.DATA_WIDHT(32))
         reg1[2:0] (
-            .Data_In({mux1_Data_Out0,mux1_Data_Out1,reg0_Data_Out4}),
+            .Data_In({mux1_Data_Out0,mux1_Data_Out1,reg0_Data_Out4_delay}),
             .clk(clk),
             .rst(rst),
-            .enable(1'b1),
+            .enable(Valid_In),
             .Data_Out({reg1_Data_Out0,reg1_Data_Out1,reg1_Data_Out2})
         );
     // 3F Pipeline
