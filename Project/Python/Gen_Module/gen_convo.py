@@ -55,4 +55,10 @@ def convo(img_widht = 299,img_height = 299, img_depth = 32,name_module ="convo")
     out += "\t\t" + "input rst,\n"
     for i in range(0,img_depth):
         out += "\t\t" + "output [31:0] Data_Out"+str(i)+",\n"
-    out += "\t\t" +"output Valid_Out" 
+    out += "\t\t" +"output Valid_Out\n"
+    out += "\t\t" +");" 
+
+    # for j in range (0,img_depth):
+        #ptiny submodule convo2d_32
+
+    

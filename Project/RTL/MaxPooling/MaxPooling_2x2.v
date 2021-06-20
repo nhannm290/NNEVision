@@ -7,10 +7,10 @@ module MaxPooling_2x2 (
     output Valid_Out
 );
 
-    wire [31:0] kernel_Data_Out1,kernel_Data_Out1,kernel_Data_Out3,kernel_Data_Out4;
+    wire [31:0] kernel_Data_Out1,kernel_Data_Out2,kernel_Data_Out3,kernel_Data_Out4;
     wire kernel_Valid_Out;
 
-    Kernel_2x2_stride_2x2 #(.DATA_WIDHT(32), .IMG_WIDHT(299),IMG_WIDHT(299))
+    Kernel_2x2_stride_2x2 #(.DATA_WIDHT(32), .IMG_WIDHT(299),.IMG_HEIGHT(299))
     kernel (
         .Data_In(Data_In),
         .Valid_In(Valid_In),
