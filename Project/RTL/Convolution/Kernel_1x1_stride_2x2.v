@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Kernel_1x1_stride_2x2#(parameter IMG_WIDHT = 299, parameter IMG_HEIGHT = 299)
+module Kernel_1x1_stride_2x2#(parameter DATA_WIDHT = 32,parameter IMG_WIDHT = 299, parameter IMG_HEIGHT = 299)
     (
-        input [31:0] Data_In,
+        input [DATA_WIDHT-1:0] Data_In,
         input Valid_In,
         input clk,
         input rst,
-        output [31:0] Data_Out,
+        output [DATA_WIDHT-1:0] Data_Out,
         output reg Valid_Out
     );
 
@@ -62,7 +62,7 @@ module Kernel_1x1_stride_2x2#(parameter IMG_WIDHT = 299, parameter IMG_HEIGHT = 
         end
     end
 
-    Line_Buffer #(.LENGHT(IMG_WIDHT),.DATA_WIDHT(32))
+    Line_Buffer #(.LENGHT(IMG_WIDHT),.DATA_WIDHT(DATA_WIDHT))
         line (
             .clk(clk),
             .rst(rst),

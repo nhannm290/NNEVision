@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Test_Kernel_1x1_stride_2x2(
+module Test_Kernel_3x3_stride_1x1_padding_1x1(
     
     );
     parameter   DATA_WIDHT = 32;
@@ -35,7 +35,7 @@ module Test_Kernel_1x1_stride_2x2(
     reg clk,rst,Valid_in;
     
     
-    wire [DATA_WIDHT-1:0] Data_Out;
+    wire [DATA_WIDHT-1:0] Data_Out1,Data_Out2,Data_Out3,Data_Out4,Data_Out5,Data_Out6,Data_Out7,Data_Out8,Data_Out9;
     wire Valid_Out;
     
     integer file_read,Data,file_write;
@@ -52,8 +52,7 @@ module Test_Kernel_1x1_stride_2x2(
         while(!$feof(file_read) || Valid_Out ==1) begin
            Data = $fscanf(file_read,"%b",Data_In);
            if (Valid_Out) begin
-            //    $fwrite(file_write,"%h\t%h\t%h\t%h\t%h\t%h\t%h\t%h\t%h\n",Data_Out1,Data_Out2,Data_Out3,Data_Out4,Data_Out5,Data_Out6,Data_Out7,Data_Out8,Data_Out9);
-               $fwrite(file_write,"%h\n",Data_Out);
+               $fwrite(file_write,"%h\t%h\t%h\t%h\t%h\t%h\t%h\t%h\t%h\n",Data_Out1,Data_Out2,Data_Out3,Data_Out4,Data_Out5,Data_Out6,Data_Out7,Data_Out8,Data_Out9);
            end
            #Period;
         end
@@ -62,14 +61,21 @@ module Test_Kernel_1x1_stride_2x2(
     end
 always  #CLK clk =~clk;
 
-   Kernel_1x1_stride_2x2#(.DATA_WIDHT(DATA_WIDHT),.IMG_WIDHT(IMG_WIDHT),.IMG_HEIGHT(IMG_HEIGHT))
+   Kernel_3x3_stride_1x1_padding_1#(.DATA_WIDHT(DATA_WIDHT),.IMG_WIDHT(IMG_WIDHT),.IMG_HEIGHT(IMG_HEIGHT))
    DUT(
         .Data_In(Data_In),
         .Valid_in(Valid_in),
         .clk(clk),
         .rst(rst),
-        .Data_Out(Data_Out),
-
+        .Data_Out1(Data_Out1),
+        .Data_Out2(Data_Out2),
+        .Data_Out3(Data_Out3),
+        .Data_Out4(Data_Out4),
+	    .Data_Out5(Data_Out5),
+	    .Data_Out6(Data_Out6),
+	    .Data_Out7(Data_Out7),
+	    .Data_Out8(Data_Out8),
+	    .Data_Out9(Data_Out9),
         .Valid_Out(Valid_Out)
         );
 endmodule
