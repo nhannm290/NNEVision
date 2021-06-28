@@ -85,8 +85,6 @@
       .Kernel7(Kernel7),
       .Kernel8(Kernel8),
       .Valid_In(Valid_In),
-      .clk(clk),
-      .rst(rst),
       .Data_Out(Data_Out),
       .Valid_Out(Valid_Out) 
    );

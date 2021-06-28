@@ -1,18 +1,18 @@
 module Covolution2D_3x3_stride1x1 #(
     parameter DATA_WIDHT = 32, 
     parameter IMG_HEIGHT = 220,
-    parameter IMG_WIDTH = 220,
-    parameter Kernel1 = 32'h00000000,
-    parameter Kernel2 = 32'h00000000,
-    parameter Kernel3 = 32'h00000000,
-    parameter Kernel4 = 32'h00000000,
-    parameter Kernel5 = 32'h00000000,
-    parameter Kernel6 = 32'h00000000,
-    parameter Kernel7 = 32'h00000000,
-    parameter Kernel8 = 32'h00000000,
-    parameter Kernel9 = 32'h00000000
+    parameter IMG_WIDTH = 220
 ) (
     input [DATA_WIDHT-1:0] Data_In,
+    input [31:0] Kernel1,
+    input [31:0] Kernel2,
+    input [31:0] Kernel3,
+    input [31:0] Kernel4,
+    input [31:0] Kernel5,
+    input [31:0] Kernel6,
+    input [31:0] Kernel7,
+    input [31:0] Kernel8,
+    input [31:0] Kernel9,
     input clk,
     input rst,
     input Valid_In,

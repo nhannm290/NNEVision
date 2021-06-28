@@ -22,27 +22,16 @@
 
 module Relu_Core(
     input [31:0] Data_In,
-    input clk,
-    input rst,
     input Valid_In,
     output reg [31:0] Data_Out,
-    output reg Valid_Out
+    output  Valid_Out
     );
-    always @(posedge clk or rst) begin
-        if(~rst) begin
-            Data_Out<=0;
-            Valid_Out<=0;
+    assign Valid_Out = (Valid_In ==1) ? 1 : 0;
+    always @(Data_In or Valid_In) begin 
+        if (Valid_In ==1) begin
+            if (Data_In[31]) Data_Out <=32'h0;
+            else Data_Out <= Data_In;
         end
-        else if (Valid_In) begin
-            if(Data_In[31]) begin
-                Data_Out <= 32'h0;
-                Valid_Out <= 1;
-            end
-            else begin
-                Data_Out <= Data_In;
-                Valid_Out <= 1;
-            end
-        end
-            
+        else Data_Out <= 32'hzzzzzzzz;
     end
 endmodule
