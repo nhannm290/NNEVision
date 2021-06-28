@@ -42,7 +42,7 @@ module Test_Convolution2D_3x3_stride_1x1 (
         while(!$feof(file_read) || Valid_Out ==1) begin
            Data = $fscanf(file_read,"%b",Data_In);
            if (Valid_Out) begin
-               $fwrite(file_write,"%h\n",Data_Out);
+               $fwrite(file_write,"%h\t%h\t%h\t%h\t",Data_Out[31:0],Data_Out[63:32]);
                counter = counter +1'd1;
            end
            #Period;

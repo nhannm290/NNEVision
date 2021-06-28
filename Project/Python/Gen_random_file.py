@@ -1,8 +1,8 @@
 import numpy as np
 import os
-import struct
 current_dir = os.getcwd()
 
+import struct
 IMG_WIDTH = 220
 IMG_HEIGHT = 220
 path = "/Project/Testbench/"

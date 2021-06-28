@@ -43,7 +43,6 @@ module Kernel_3x3_stride_1x1#(parameter DATA_WIDHT=8,parameter IMG_WIDHT = 220,p
         else if(Valid_in) Counter <= Counter +1'd1;
         else Counter <= Counter;
     end
-
     reg [31:0] Counter_HEIGHT = 1;
     always @ (posedge clk or negedge rst) begin
         if (~rst) Counter_HEIGHT <= 1;
@@ -52,16 +51,6 @@ module Kernel_3x3_stride_1x1#(parameter DATA_WIDHT=8,parameter IMG_WIDHT = 220,p
             else Counter_HEIGHT <= Counter_HEIGHT;
         end
     end
-
-    // always @ (posedge clk or negedge rst) begin 
-    //     if (~rst) Valid_Out <=0;
-    //     else if (Valid_in) begin
-    //         if (Counter > IMG_WIDHT*2+2 && Counter < IMG_WIDHT * IMG_HEIGHT) begin
-    //             if (Counter > IMG_WIDHT *2 +2 && Counter < IMG_WIDHT * 2) Valid_Out <=1;
-    //             else Valid_Out <=0;
-    //         end
-    //     end
-    // end
     assign Valid_Out = (Counter > IMG_WIDHT*(Counter_HEIGHT-1)+2 && Counter < IMG_WIDHT*IMG_HEIGHT +1 && Counter_HEIGHT >2) ? 1'b1:1'b0;
 
     nbit_Dff #(.DATA_WIDHT(DATA_WIDHT))

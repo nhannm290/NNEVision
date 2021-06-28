@@ -1,41 +1,47 @@
 import math
+import struct
+import os
+current_dir = os.getcwd()
 
-Gama_Address = ""
-Beta_Address = ""
-Moving_Mean_Address = ""
-Moving_Variance_Address = ""
+path = "/Project/Python/Weight_File/Convo1/"
 
-A_Address = ""
-B_Address = ""
+def float_to_bin(num):
+    return format(struct.unpack('!I', struct.pack('!f', num))[0], '032b')
+    print(float_to_bin(-3.39298397e-02)) 
 
-file_Gama = open(Gama_Address,"r")
-file_Beta = open(Beta_Address,"r")
+Moving_Mean_Address = current_dir +path +"conv1_1_running_mean.txt"
+Moving_Variance_Address = current_dir +path +"conv1_1_running_var.txt"
+
+A_Address = current_dir +path +"A.txt"
+B_Address = current_dir +path +"B.txt"
+
+
 file_Mean = open(Moving_Mean_Address,"r")
 file_Variance = open(Moving_Variance_Address, "r")
 
 file_A = open(A_Address,"w")
 file_B = open(B_Address,"w")
 
-line_Gama = file_Gama.readline()
-line_Beta = file_Beta.readline()
+
 line_Mean = file_Mean.readline()
 line_Variance = file_Variance.readline()
 
-while line_Beta != "" and line_Gama !="" and line_Mean !="" and line_Mean !="":
-    gama = float(line_Gama)
-    beta = float(line_Beta)
+while line_Mean !="" and line_Mean !="":
+    gama = 1
+    beta = 0
     mean = float(line_Mean)
     variance = float(line_Variance)
 
     A = gama / (math.sqrt(variance+0.001))
-    file_A.write(str(A)+"\n")
+    file_A.write(float_to_bin(A)+"\n")
     B = beta - A * mean 
-    file_B.write(str(B) +"\n")
+    file_B.write(float_to_bin(B) +"\n")
+    line_Mean = file_Mean.readline()
+    line_Variance = file_Variance.readline()
 
 file_A.close()
 file_B.close()
-file_Beta.close()
-file_Gama.close()
+
 file_Mean.close()
 file_Variance.close()
 
