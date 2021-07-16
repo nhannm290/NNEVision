@@ -1,23 +1,25 @@
 module Layer1  #(
     parameter DATA_WIDHT = 32,
-    parameter IMG_WIDHT =220,
-    parameter IMG_HEIGHT =220,
-    parameter CHANNEL_IN = 1, 
-    parameter CHANNEL_OUT =8;
+    parameter IMG_WIDTH =220,
+    parameter IMG_HEIGHT =220
 ) (
     input [DATA_WIDHT-1:0] Data_In,
     input clk,
     input rst,
     input Valid_In,
-    output [DATA_WIDHT*CHANNEL_OUT-1:0] DataOut,
+    output wire [DATA_WIDHT*8-1:0] Data_Out,
     output Valid_Out
 );  
     wire CHANNEL1_Valid_Out,CHANNEL2_Valid_Out,CHANNEL3_Valid_Out,CHANNEL4_Valid_Out,CHANNEL5_Valid_Out,CHANNEL6_Valid_Out,CHANNEL7_Valid_Out,CHANNEL8_Valid_Out;
-    wire [31:0] CHANNEL1_Data_Out,CHANNEL2_Data_Out,CHANNEL3_Data_Out,CHANNEL4_Data_Out,CHANNEL5_Data_Out,CHANNEL6_Data_Out,CHANNEL7_Data_Out,CHANNEL8_Data;
+    wire [31:0] CHANNEL1_Data_Out,CHANNEL2_Data_Out,CHANNEL3_Data_Out,CHANNEL4_Data_Out,CHANNEL5_Data_Out,CHANNEL6_Data_Out,CHANNEL7_Data_Out,CHANNEL8_Data_Out;
     wire [31:0] bn1_Data_Out,bn2_Data_Out,bn3_Data_Out,bn4_Data_Out,bn5_Data_Out,bn6_Data_Out,bn7_Data_Out,bn8_Data_Out;
     wire bn1_Valid_Out,bn2_Valid_Out,bn3_Valid_Out,bn4_Valid_Out,bn5_Valid_Out,bn6_Valid_Out,bn7_Valid_Out,bn8_Valid_Out;
-    wire rl1_Valid_Out,rl2_Valid_Out,rl3_Valid_Out,rl4_Valid_Out,rl5_Valid_Out,rl6_Valid_Out,rl7_Valid_Out,rl8_Valid_Out;
 
+    
+    wire [31:0] rl1_Data_Out,rl2_Data_Out,rl3_Data_Out,rl4_Data_Out,rl5_Data_Out,rl6_Data_Out,rl7_Data_Out,rl8_Data_Out;
+    wire rl1_Valid_Out,rl2_Valid_Out,rl3_Valid_Out,rl4_Valid_Out,rl5_Valid_Out,rl6_Valid_Out,rl7_Valid_Out,rl8_Valid_Out;
+    assign Data_Out = {rl8_Data_Out,rl7_Data_Out,rl6_Data_Out,rl5_Data_Out,rl4_Data_Out,rl3_Data_Out,rl2_Data_Out,rl1_Data_Out};
+    assign Valid_Out = CHANNEL1_Valid_Out & CHANNEL2_Valid_Out & CHANNEL3_Valid_Out & CHANNEL4_Valid_Out & CHANNEL5_Valid_Out&CHANNEL6_Valid_Out&CHANNEL7_Valid_Out&CHANNEL8_Valid_Out;
     Covolution2D_3x3_stride1x1 #(
         .DATA_WIDHT(DATA_WIDHT),
         .IMG_WIDTH(IMG_WIDTH),
@@ -41,7 +43,8 @@ module Layer1  #(
             .Valid_Out(CHANNEL1_Valid_Out)
         );
         
-        Batch_Norm bn1(
+        Batch_Norm bn1( 
+            
             .Data_A(32'b01000000100001111000001110011001), // Thông số A sau khi tính
             .Data_B(32'b10111111000110101000110101100010),
             .Data_In(CHANNEL1_Data_Out),
@@ -53,9 +56,8 @@ module Layer1  #(
         Relu_Core rl1(
             .Data_In(bn1_Data_Out),
             .Valid_In(bn1_Valid_Out),
-            .Data_Out(Data_Out[DATA_WIDHT-1:0]),
+            .Data_Out(rl1_Data_Out),
             .Valid_Out(rl1_Valid_Out)
-
         );
     
     Covolution2D_3x3_stride1x1 #(
@@ -93,7 +95,7 @@ module Layer1  #(
         Relu_Core rl2(
             .Data_In(bn2_Data_Out),
             .Valid_In(bn2_Valid_Out),
-            .Data_Out(Data_Out[DATA_WIDHT*2-1:DATA_WIDHT]),
+            .Data_Out(rl2_Data_Out),
             .Valid_Out(rl2_Valid_Out)
         );
 
@@ -132,7 +134,7 @@ module Layer1  #(
         Relu_Core rl3(
             .Data_In(bn3_Data_Out),
             .Valid_In(bn3_Valid_Out),
-            .Data_Out(Data_Out[DATA_WIDHT*3-1:DATA_WIDHT*2]),
+            .Data_Out(rl3_Data_Out),
             .Valid_Out(rl3_Valid_Out)
         );
 
@@ -171,7 +173,7 @@ module Layer1  #(
         Relu_Core rl4(
             .Data_In(bn4_Data_Out),
             .Valid_In(bn4_Valid_Out),
-            .Data_Out(Data_Out[DATA_WIDHT*4-1:DATA_WIDHT*3]),
+            .Data_Out(rl4_Data_Out),
             .Valid_Out(rl4_Valid_Out)
         );
 
@@ -207,10 +209,10 @@ module Layer1  #(
             .Valid_Out(bn5_Valid_Out)
         );
 
-        Relu_Core rl3(
+        Relu_Core rl5(
             .Data_In(bn5_Data_Out),
             .Valid_In(bn5_Valid_Out),
-            .Data_Out(Data_Out[DATA_WIDHT*5-1:DATA_WIDHT*4]),
+            .Data_Out(rl5_Data_Out),
             .Valid_Out(rl5_Valid_Out)
         );
 
@@ -249,7 +251,7 @@ module Layer1  #(
         Relu_Core rl6(
             .Data_In(bn6_Data_Out),
             .Valid_In(bn6_Valid_Out),
-            .Data_Out(Data_Out[DATA_WIDHT*6-1:DATA_WIDHT*5]),
+            .Data_Out(rl6_Data_Out),
             .Valid_Out(rl6_Valid_Out)
         );
 
@@ -286,9 +288,9 @@ module Layer1  #(
         );
 
         Relu_Core rl7(
-            .Data_In(bn6_Data_Out),
+            .Data_In(bn7_Data_Out),
             .Valid_In(bn7_Valid_Out),
-            .Data_Out(Data_Out[DATA_WIDHT*7-1:DATA_WIDHT*6]),
+            .Data_Out(rl7_Data_Out),
             .Valid_Out(rl7_Valid_Out)
         );
 
@@ -325,9 +327,9 @@ module Layer1  #(
         );
 
         Relu_Core rl8(
-            .Data_In(bn6_Data_Out),
+            .Data_In(bn8_Data_Out),
             .Valid_In(bn6_Valid_Out),
-            .Data_Out(Data_Out[DATA_WIDHT*8-1:DATA_WIDHT*7]),
+            .Data_Out(rl8_Data_Out),
             .Valid_Out(rl8_Valid_Out)
         );
 

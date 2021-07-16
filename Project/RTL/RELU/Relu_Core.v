@@ -32,6 +32,6 @@ module Relu_Core(
             if (Data_In[31]) Data_Out <=32'h0;
             else Data_Out <= Data_In;
         end
-        else Data_Out <= 32'hzzzzzzzz;
+        else if (Valid_In ==0) Data_Out <= 32'hzzzzzzzz;
     end
 endmodule

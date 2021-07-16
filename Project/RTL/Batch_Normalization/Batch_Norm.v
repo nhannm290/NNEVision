@@ -47,7 +47,8 @@ module Batch_Norm (
         .Valid_In(Valid_In),
         .Mode(1'b0),
         .RMode(2'b0),
-        .Data_Out(Valid_Out),
+        .Data_Out(Data_Out),
+        .Valid_Out(Valid_Out)
     );
 
     // nbit_Dff #(.DATA_WIDHT(32)) 
